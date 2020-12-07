@@ -2,6 +2,14 @@
   width: 50%;
   padding: 0.2em;
 
+  &.gird {
+    width: 50%;
+  }
+
+  &.list {
+    width: 100%;
+  }
+
   .vidoe {
     display: flex;
     align-items: center;
@@ -16,12 +24,14 @@
       transform: scale(1.02);
     }
 
+    .thumbnails {
+      width: 40%;
+      height: 100%;
+    }
+
     .metadata {
       margin-left: 0.2em;
-      .thumbnails {
-        width: 40%;
-        height: 100%;
-      }
+
       .title {
         margin: 0;
         font-size: 0.8rem;

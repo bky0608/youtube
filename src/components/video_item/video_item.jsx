@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { memo } from 'react';
 import styles from './video_item.module.scss';
 
-const VideoItem = ({ video: { snippet } }) => {
+const VideoItem = memo(({ video, video: { snippet }, onVideoClick, display }) => {
+  const displayType = display === 'list' ? styles.list : styles.grid;
+
   return (
-    <li className={styles.container}>
+    <li //
+      className={`${styles.container} ${displayType}`}
+      onClick={() => onVideoClick(video)}
+    >
       <div className={styles.vidoe}>
         <img
           className={styles.thumbnails}
@@ -18,6 +23,6 @@ const VideoItem = ({ video: { snippet } }) => {
       </div>
     </li>
   );
-};
+});
 
 export default VideoItem;
